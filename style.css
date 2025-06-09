@@ -1,0 +1,50 @@
+/* style.css */
+
+body {
+    /* Ito ang mga kulay na magpapalit-palit at direksyon ng gradient */
+    background: linear-gradient(-45deg, #530000, #8b0101, #1d0000, #0a002c); /* Piliin ang iyong 4 na kulay */
+    
+    /* Ito ang magsasabi kung gaano kalaki ang background para magkaroon ng space ang animation */
+    background-size: 400% 400%;
+
+    /* Ito ang magpapa-animate ng background */
+    animation: gradientShift 15s ease infinite; /* 15s = gaano katagal ang cycle, infinite = tuloy-tuloy */
+
+    /* Basic styles para sa text at layout */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f80000; /* Gawing light ang text para mas visible sa dark background */
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh; /* Siguraduhin na ang body ay sumasakop sa buong taas ng screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* @keyframes rule ang gumagawa ng animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%; /* Starting position ng gradient */
+    }
+    50% {
+        background-position: 100% 50%; /* Middle position */
+    }
+    100% {
+        background-position: 0% 50%; /* Balik sa starting position */
+    }
+}
+
+/* Optional: Styles para sa content mo */
+h1 {
+    font-size: 4em;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3); /* Lagyan ng anino para mas mabasa */
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5em;
+    max-width: 800px;
+    margin-top: 0;
+}
